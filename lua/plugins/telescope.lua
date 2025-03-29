@@ -13,9 +13,9 @@ return {
     -- change some options
     opts = {
       defaults = {
-        layout_strategy = "horizontal",
+        layout_strategy = "vertical",
         layout_config = { prompt_position = "bottom" },
-        sorting_strategy = "ascending",
+        sorting_strategy = "descending",
         winblend = 0,
       },
     },
