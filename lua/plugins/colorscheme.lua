@@ -5,56 +5,13 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavour = "mocha",
-      integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
-        fzf = true,
-        grug_far = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        snacks = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-    },
-    specs = {
-      {
-        "akinsho/bufferline.nvim",
-        optional = true,
-        opts = function(_, opts)
-          if (vim.g.colors_name or ""):find("catppuccin") then
-            opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-          end
-        end,
-      },
+      flavour = "frappe",
+      term_colors = true,
+      custom_highlights = function(colors)
+        return {
+          TermCursor = { fg = colors.crust, bg = colors.mauve },
+        }
+      end,
     },
   },
 
@@ -65,3 +22,32 @@ return {
     },
   },
 }
+
+-- return {
+-- 	rosewater = "#f2d5cf",
+-- 	flamingo = "#eebebe",
+-- 	pink = "#f4b8e4",
+-- 	mauve = "#ca9ee6",
+-- 	red = "#e78284",
+-- 	maroon = "#ea999c",
+-- 	peach = "#ef9f76",
+-- 	yellow = "#e5c890",
+-- 	green = "#a6d189",
+-- 	teal = "#81c8be",
+-- 	sky = "#99d1db",
+-- 	sapphire = "#85c1dc",
+-- 	blue = "#8caaee",
+-- 	lavender = "#babbf1",
+-- 	text = "#c6d0f5",
+-- 	subtext1 = "#b5bfe2",
+-- 	subtext0 = "#a5adce",
+-- 	overlay2 = "#949cbb",
+-- 	overlay1 = "#838ba7",
+-- 	overlay0 = "#737994",
+-- 	surface2 = "#626880",
+-- 	surface1 = "#51576d",
+-- 	surface0 = "#414559",
+-- 	base = "#303446",
+-- 	mantle = "#292c3c",
+-- 	crust = "#232634",
+-- }
