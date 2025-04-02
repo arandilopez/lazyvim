@@ -1,5 +1,5 @@
 {
-  "CopilotChat.nvim": { "branch": "main", "commit": "cd82b6b9c4cfb254218f5782cc3339e05cbb9989" },
+  "CopilotChat.nvim": { "branch": "main", "commit": "23162ada224e858d0d60bbbf2a35f9b6c98427ce" },
   "LazyVim": { "branch": "main", "commit": "3f034d0a7f58031123300309f2efd3bb0356ee21" },
   "R.nvim": { "branch": "main", "commit": "e6014bdb902970b47c756ee29fa9e08470e7a2e1" },
   "SchemaStore.nvim": { "branch": "main", "commit": "e659e0c6ca06727ed898aaaeea3850f528898684" },
@@ -36,6 +36,7 @@
   "neotest-python": { "branch": "master", "commit": "a2861ab3c9a0bf75a56b11835c2bfc8270f5be7e" },
   "neotest-rspec": { "branch": "main", "commit": "281c0ed0e55d623e8028796e1c4dc27b7e421fd0" },
   "neotest-testthat": { "branch": "main", "commit": "63be77b75a2ad33df39e3c4e4de10e163a21cfef" },
+  "neotest-vitest": { "branch": "main", "commit": "9f8f05bee6e5b980a4d1e84adab119a8f9756a77" },
   "noice.nvim": { "branch": "main", "commit": "0427460c2d7f673ad60eb02b35f5e9926cf67c59" },
   "nui.nvim": { "branch": "main", "commit": "8d3bce9764e627b62b07424e0df77f680d47ffdb" },
   "nvim-dap": { "branch": "master", "commit": "7aade9e99bef5f0735cf966e715b3ce45515d786" },
@@ -53,7 +54,7 @@
   "nvim-ts-context-commentstring": { "branch": "main", "commit": "1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f" },
   "persistence.nvim": { "branch": "main", "commit": "166a79a55bfa7a4db3e26fc031b4d92af71d0b51" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
-  "render-markdown.nvim": { "branch": "main", "commit": "92256e02db70c474f97fc461b6b6bc4aff7a499a" },
+  "render-markdown.nvim": { "branch": "main", "commit": "1e2e9a386fbe41b869d3d0e000e19db72284585b" },
   "smear-cursor.nvim": { "branch": "main", "commit": "01570fdc358979678380ff8704184307e87d8a29" },
   "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "1f08ed60cafc8f6168b72b80be2b2ea149813e55" },

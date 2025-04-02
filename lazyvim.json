@@ -36,7 +36,8 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.gitui",
     "lazyvim.plugins.extras.util.mini-hipatterns",
-    "lazyvim.plugins.extras.util.startuptime"
+    "lazyvim.plugins.extras.util.startuptime",
+    "plugins.extras.lang.graphql"
   ],
   "install_version": 8,
   "news": {
