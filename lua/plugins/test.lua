@@ -1,12 +1,18 @@
 return {
   {
     "nvim-neotest/neotest",
-    lazy = true,
+
     dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      -- Adapters
       "zidhuss/neotest-minitest",
       "olimorris/neotest-rspec",
       "marilari88/neotest-vitest",
     },
+
     config = function()
       require("neotest").setup({
         adapters = {
@@ -19,17 +25,14 @@ return {
               return false
             end,
           }),
-          require("neotest-rspec"),
+          require("neotest-rspec")({
+            rspec_cmd = function()
+              return vim.tbl_flatten({ "bundle", "exec", "rspec" })
+            end,
+          }),
           require("neotest-minitest")({
             test_cmd = function()
-              return vim
-                .iter({
-                  "bundle",
-                  "exec",
-                  "rails",
-                  "test",
-                })
-                :flatten()
+              return vim.tbl_flatten({ "bundle", "exec", "rails", "test" })
             end,
           }),
         },
