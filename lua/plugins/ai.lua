@@ -2,7 +2,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     opts = {
-      copilot_model = "claude-3.7-sonnet",
+      copilot_model = "gpt-4o-copilot",
     },
   },
   {
