@@ -16,3 +16,6 @@ vim.keymap.set("n", "[o", function()
   local line = vim.fn.line(".")
   vim.fn.append(line - 1, "")
 end, { desc = "Insert line above the cursor" })
+
+-- Code Companion
+vim.cmd([[cab cc CodeCompanion]])

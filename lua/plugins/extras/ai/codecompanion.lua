@@ -1,7 +1,29 @@
 return {
   {
     "olimorris/codecompanion.nvim",
+    enabled = true,
+    event = "VeryLazy",
     opts = {
+      strategies = {
+        chat = {
+          adapter = "copilot",
+          model = "claude-3-7-sonnet",
+        },
+        inline = {
+          adapter = "copilot",
+          model = "claude-3-7-sonnet",
+        },
+        cmd = {
+          adapter = "copilot",
+          model = "claude-3-7-sonnet",
+        },
+      },
+      display = {
+        diff = {
+          enabled = true,
+          provider = "mini_diff",
+        },
+      },
       extensions = {
         mcphub = {
           callback = "mcphub.extensions.codecompanion",
@@ -61,6 +83,12 @@ return {
     config = function()
       require("mcphub").setup()
     end,
+  },
+  {
+    "echasnovski/mini.diff",
+    opts = {
+      source = require("mini.diff").gen_source.none(),
+    },
   },
   {
     "HakonHarnes/img-clip.nvim",
