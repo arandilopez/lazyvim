@@ -39,7 +39,8 @@
     "lazyvim.plugins.extras.util.startuptime",
     "plugins.extras.ai.codecompanion",
     "plugins.extras.lang.graphql",
-    "plugins.extras.lang.ruby"
+    "plugins.extras.lang.ruby",
+    "plugins.extras.lang.yaml"
   ],
   "install_version": 8,
   "news": {
