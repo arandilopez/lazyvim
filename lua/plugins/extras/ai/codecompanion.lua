@@ -1,3 +1,5 @@
+vim.env["CODECOMPANION_TOKEN_PATH"] = vim.fn.expand("~/.config")
+
 return {
   {
     "olimorris/codecompanion.nvim",
@@ -18,6 +20,15 @@ return {
           model = "claude-3-7-sonnet",
         },
       },
+      adapters = {
+        tavily = function()
+          return require("codecompanion.adapters").extend("tavily", {
+            env = {
+              api_key = "cmd:op read op://Private/Tavily/password --no-newline",
+            },
+          })
+        end,
+      },
       display = {
         diff = {
           enabled = true,
@@ -31,6 +42,31 @@ return {
             make_vars = true,
             make_slash_commands = true,
             show_result_in_chat = true,
+          },
+          contextfiles = {
+            opts = {
+              slash_command = {
+                enabled = true,
+                name = "context",
+                ctx_opts = {
+                  context_dir = ".github/instructions",
+                  root_markers = { ".git" },
+                  gist_ids = {},
+                  enable_local = true,
+                },
+                format_opts = {
+                  ---@param context_file ContextFiles.ContextFile the context file to prepend the prefix
+                  prefix = function(context_file)
+                    return string.format(
+                      "Please follow the rules located at `%s`:",
+                      vim.fn.fnamemodify(context_file.file, ":.")
+                    )
+                  end,
+                  suffix = "",
+                  separator = "",
+                },
+              },
+            },
           },
         },
         history = {
@@ -71,6 +107,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "ravitemer/mcphub.nvim",
       "ravitemer/codecompanion-history.nvim",
+      "banjo/contextfiles.nvim",
     },
     keys = {
       { "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle Code Companion Chat" },

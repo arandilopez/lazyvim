@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false
+
+vim.g.codecompanion_auto_tool_mode = true
