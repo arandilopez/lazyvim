@@ -4,15 +4,13 @@ return {
     lazy = true,
     name = "catppuccin",
     priority = 1000,
-    opts = {
-      flavour = "frappe",
-      term_colors = true,
-      custom_highlights = function(colors)
-        return {
-          TermCursor = { fg = colors.crust, bg = colors.mauve },
-        }
-      end,
-    },
+    opts = function(_, opts)
+      local module = require("catppuccin.groups.integrations.bufferline")
+      if module then
+        module.get = module.get_theme
+      end
+      return opts
+    end,
   },
 
   {
