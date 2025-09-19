@@ -37,6 +37,7 @@
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.ui.smear-cursor",
     "lazyvim.plugins.extras.util.dot",
+    "lazyvim.plugins.extras.util.gitui",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "lazyvim.plugins.extras.util.startuptime",
     "plugins.extras.ai.codecompanion",
@@ -46,7 +47,7 @@
   ],
   "install_version": 8,
   "news": {
-    "NEWS.md": "10960"
+    "NEWS.md": "11866"
   },
   "version": 8
 }
