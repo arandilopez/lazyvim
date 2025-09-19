@@ -122,7 +122,7 @@ return {
     end,
   },
   {
-    "echasnovski/mini.diff",
+    "nvim-mini/mini.diff",
     opts = {
       source = require("mini.diff").gen_source.none(),
     },
