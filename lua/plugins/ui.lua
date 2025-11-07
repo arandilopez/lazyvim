@@ -36,6 +36,9 @@ return {
   {
     "snacks.nvim",
     opts = {
+      picker = {
+        layout = "vertical",
+      },
       dashboard = {
         preset = {
           header = table.concat({
